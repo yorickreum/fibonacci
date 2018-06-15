@@ -126,7 +126,7 @@ class LedController {
       // 1.2 aufteilen:
       if ( fs.fieldStates[1][0] && fs.fieldStates[1][1] ) {
         for ( int i = 1; i >= 0; i-- ) {
-          if ( !(fs.fieldStates[1][i]) ) {
+          if ( !(fs.fieldStates[0][i]) ) {
             fs.setField(i, 2, false);
             fs.setField(i, 1, true);
             break;
