@@ -3,26 +3,26 @@ class LedField {
     LedField( byte p ) : pinR(p), pinY(p + 1), pinB(p + 2)
     {
       pinMode(pinR, OUTPUT);
-      digitalWrite(pinR, LOW);
+      digitalWrite(pinR, HIGH);
       pinMode(pinY, OUTPUT);
-      digitalWrite(pinY, LOW);
+      digitalWrite(pinY, HIGH);
       pinMode(pinB, OUTPUT);
-      digitalWrite(pinB, LOW);
+      digitalWrite(pinB, HIGH);
     }
     void update(char s) {
-      digitalWrite(pinR, LOW);
-      digitalWrite(pinY, LOW);
-      digitalWrite(pinB, LOW);
+      digitalWrite(pinR, HIGH);
+      digitalWrite(pinY, HIGH);
+      digitalWrite(pinB, HIGH);
       this->state = s;
       switch (s) {
         case 'r':
-          digitalWrite(pinR, HIGH);
+          digitalWrite(pinR, LOW);
           break;
         case 'y':
-          digitalWrite(pinY, HIGH);
+          digitalWrite(pinY, LOW);
           break;
         case 'b':
-          digitalWrite(pinB, HIGH);
+          digitalWrite(pinB, LOW);
           break;
         default:
           break;
