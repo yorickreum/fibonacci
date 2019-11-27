@@ -1,8 +1,8 @@
 import 'dart:async';
+import 'package:fibonapp/src/widgets/BluetoothDeviceListEntry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 
-import '../widgets/BluetoothDeviceListEntry.dart';
 
 class SelectBondedDeviceScreen extends StatefulWidget {
   /// If true, on page start there is performed discovery upon the bonded devices.
